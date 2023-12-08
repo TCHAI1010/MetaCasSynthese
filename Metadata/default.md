@@ -11,7 +11,7 @@
       <attribute defType="com.stambia.file.file.lineToSkip" id="_H2HuoIUlEe6BKsDnQj9IRA" value="0"/>
       <attribute defType="com.stambia.file.file.lastLineToSkip" id="_H2HuoYUlEe6BKsDnQj9IRA" value="0"/>
       <attribute defType="com.stambia.file.file.header" id="_H2IVsIUlEe6BKsDnQj9IRA" value="0"/>
-      <attribute defType="com.stambia.file.file.physicalName" id="_Kibj4IUlEe6BKsDnQj9IRA" value="F_CLIENT_20231001.txt"/>
+      <attribute defType="com.stambia.file.file.physicalName" id="_Kibj4IUlEe6BKsDnQj9IRA" value="F_CLIENT_20231208.txt"/>
       <node defType="com.stambia.file.field" id="_O0P-bIUlEe6BKsDnQj9IRA" name="F4" position="4">
         <attribute defType="com.stambia.file.field.size" id="_O0P-bYUlEe6BKsDnQj9IRA" value="71"/>
         <attribute defType="com.stambia.file.field.type" id="_O0P-boUlEe6BKsDnQj9IRA" value="String"/>

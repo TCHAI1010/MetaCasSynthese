@@ -69,6 +69,21 @@
         <attribute defType="com.stambia.rdbms.check.sql" id="_wK3VkJAtEe69cu6-bNESsg" value="EMAIL like '%@%.%'"/>
         <attribute defType="com.stambia.rdbms.check.severity" id="_YU4icJAuEe69cu6-bNESsg" value="200"/>
       </node>
+      <node defType="com.stambia.rdbms.column" id="_0wYTjZWkEe6KJ9B1NiSMNg" name="ACT" position="6">
+        <attribute defType="com.stambia.rdbms.column.name" id="_0wYTjpWkEe6KJ9B1NiSMNg" value="ACT"/>
+        <attribute defType="com.stambia.rdbms.column.nullable" id="_0wYTj5WkEe6KJ9B1NiSMNg" value="1"/>
+        <attribute defType="com.stambia.rdbms.column.charByte" id="_0wYTkJWkEe6KJ9B1NiSMNg" value="CHAR"/>
+        <attribute defType="com.stambia.rdbms.column.type" id="_0wYTkZWkEe6KJ9B1NiSMNg" value="VARCHAR2"/>
+        <attribute defType="com.stambia.rdbms.column.size" id="_0wYTkpWkEe6KJ9B1NiSMNg" value="10"/>
+      </node>
+      <node defType="com.stambia.rdbms.check" id="_QKydUZWpEe6KJ9B1NiSMNg" name="Status">
+        <attribute defType="com.stambia.rdbms.check.remarks" id="_doxscJWpEe6KJ9B1NiSMNg" value="status obligatoire"/>
+        <attribute defType="com.stambia.rdbms.check.sql" id="_f10y0JWpEe6KJ9B1NiSMNg" value="STATUS_EMAIL is not null"/>
+      </node>
+      <node defType="com.stambia.rdbms.check" id="_YI-xAZWrEe6KJ9B1NiSMNg" name="action">
+        <attribute defType="com.stambia.rdbms.check.remarks" id="_ZmIrgJWrEe6KJ9B1NiSMNg" value="ACT  = 'S' or  ACT = 'M' or ACT = 'C'"/>
+        <attribute defType="com.stambia.rdbms.check.sql" id="_amvM4JWrEe6KJ9B1NiSMNg" value="ACT  is not null"/>
+      </node>
     </node>
     <node defType="com.stambia.rdbms.datastore" id="_jua8pJAlEe69cu6-bNESsg" name="SAS_COMPTE">
       <attribute defType="com.stambia.rdbms.datastore.name" id="_jua8pZAlEe69cu6-bNESsg" value="SAS_COMPTE"/>
@@ -124,6 +139,30 @@
           <attribute defType="com.stambia.rdbms.relation.fk" id="_unDBIpAnEe69cu6-bNESsg" ref="resource.md#_jzfp7JAlEe69cu6-bNESsg?fileId=_CHAaQIUmEe6BKsDnQj9IRA$type=md$name=ID_FICHIER?"/>
           <attribute defType="com.stambia.rdbms.relation.pk" id="_unDBI5AnEe69cu6-bNESsg" ref="resource.md#_juUO8JAlEe69cu6-bNESsg?fileId=_CHAaQIUmEe6BKsDnQj9IRA$type=md$name=ID_FICHIER?"/>
         </node>
+      </node>
+      <node defType="com.stambia.rdbms.check" id="_HYwoAZWeEe6KJ9B1NiSMNg" name="Type_ligne">
+        <attribute defType="com.stambia.rdbms.check.sql" id="_gQ93sJWeEe6KJ9B1NiSMNg" value="TYPE is not null"/>
+        <attribute defType="com.stambia.rdbms.check.severity" id="_jZV94JWeEe6KJ9B1NiSMNg" value="200"/>
+        <attribute defType="com.stambia.rdbms.check.remarks" id="_mizCIJWeEe6KJ9B1NiSMNg" value="type_ligne présent&#xD;&#xA;"/>
+      </node>
+      <node defType="com.stambia.rdbms.check" id="_ANOHAZWhEe6KJ9B1NiSMNg" name="Status">
+        <attribute defType="com.stambia.rdbms.check.remarks" id="_E-xxgJWhEe6KJ9B1NiSMNg" value="status est présent et égale à 0 ou 1"/>
+        <attribute defType="com.stambia.rdbms.check.sql" id="_LgB4AJWhEe6KJ9B1NiSMNg" value="STATUS is not null"/>
+      </node>
+      <node defType="com.stambia.rdbms.check" id="_Oiyo8ZWiEe6KJ9B1NiSMNg" name="cabinet">
+        <attribute defType="com.stambia.rdbms.check.remarks" id="_QC6X4JWiEe6KJ9B1NiSMNg" value="Le cabinet de rattachement appartient à une liste prédéfinie"/>
+        <attribute defType="com.stambia.rdbms.check.sql" id="_TfcJIJWiEe6KJ9B1NiSMNg" value="CABINET_RATTACHEMENT in ( 'Lille', 'Roubaix', 'Tourcoing' , 'Dunkerque', 'Villeneuve d''ascq', 'Douai', 'Wattrelos', 'Valenciennes', 'Marcq en Baroeul' )"/>
+      </node>
+      <node defType="com.stambia.rdbms.column" id="_0kIAQ5WkEe6KJ9B1NiSMNg" name="ACT" position="7">
+        <attribute defType="com.stambia.rdbms.column.name" id="_0kIARJWkEe6KJ9B1NiSMNg" value="ACT"/>
+        <attribute defType="com.stambia.rdbms.column.nullable" id="_0kIARZWkEe6KJ9B1NiSMNg" value="1"/>
+        <attribute defType="com.stambia.rdbms.column.charByte" id="_0kIARpWkEe6KJ9B1NiSMNg" value="CHAR"/>
+        <attribute defType="com.stambia.rdbms.column.type" id="_0kIAR5WkEe6KJ9B1NiSMNg" value="VARCHAR2"/>
+        <attribute defType="com.stambia.rdbms.column.size" id="_0kIASJWkEe6KJ9B1NiSMNg" value="10"/>
+      </node>
+      <node defType="com.stambia.rdbms.check" id="_pxR2sZWmEe6KJ9B1NiSMNg" name="Action">
+        <attribute defType="com.stambia.rdbms.check.remarks" id="_tu3GkJWmEe6KJ9B1NiSMNg" value="ACT = 'S' ou 'M' ou 'C'"/>
+        <attribute defType="com.stambia.rdbms.check.sql" id="_wrdakJWmEe6KJ9B1NiSMNg" value="ACT is not null"/>
       </node>
     </node>
     <node defType="com.stambia.rdbms.datastore" id="_jo7_sZAlEe69cu6-bNESsg" name="SOURCE">
@@ -251,6 +290,37 @@
           <attribute defType="com.stambia.rdbms.relation.pk" id="_uovqR5AnEe69cu6-bNESsg" ref="resource.md#_jlQZkJAlEe69cu6-bNESsg?fileId=_CHAaQIUmEe6BKsDnQj9IRA$type=md$name=CLE_CLIENT?"/>
         </node>
       </node>
+      <node defType="com.stambia.rdbms.column" id="_019XKZWkEe6KJ9B1NiSMNg" name="ACT" position="8">
+        <attribute defType="com.stambia.rdbms.column.name" id="_019XKpWkEe6KJ9B1NiSMNg" value="ACT"/>
+        <attribute defType="com.stambia.rdbms.column.nullable" id="_019XK5WkEe6KJ9B1NiSMNg" value="1"/>
+        <attribute defType="com.stambia.rdbms.column.charByte" id="_019XLJWkEe6KJ9B1NiSMNg" value="CHAR"/>
+        <attribute defType="com.stambia.rdbms.column.type" id="_019XLZWkEe6KJ9B1NiSMNg" value="VARCHAR2"/>
+        <attribute defType="com.stambia.rdbms.column.size" id="_019XLpWkEe6KJ9B1NiSMNg" value="10"/>
+      </node>
+      <node defType="com.stambia.rdbms.check" id="_IvDZoZWrEe6KJ9B1NiSMNg" name="ACTION">
+        <attribute defType="com.stambia.rdbms.check.remarks" id="_Lw2WsJWrEe6KJ9B1NiSMNg" value="ACT  = 'S' or  ACT = 'M' or ACT = 'C'"/>
+        <attribute defType="com.stambia.rdbms.check.sql" id="_M4absJWrEe6KJ9B1NiSMNg" value="ACT is not null"/>
+      </node>
+      <node defType="com.stambia.rdbms.check" id="_e4jnYZWrEe6KJ9B1NiSMNg" name="telephone renseigne">
+        <attribute defType="com.stambia.rdbms.check.remarks" id="_V5j2oJWsEe6KJ9B1NiSMNg" value="PHONE is not null"/>
+        <attribute defType="com.stambia.rdbms.check.sql" id="_XA4rEJWsEe6KJ9B1NiSMNg" value="PHONE is not null"/>
+      </node>
+      <node defType="com.stambia.rdbms.check" id="_jK3KEZWrEe6KJ9B1NiSMNg" name="status">
+        <attribute defType="com.stambia.rdbms.check.remarks" id="_royYoJWrEe6KJ9B1NiSMNg" value="Statut du n° de téléphone = Téléphone inactif ou Téléphone actif ou Téléphone NPAI&#xD;&#xA;"/>
+        <attribute defType="com.stambia.rdbms.check.sql" id="_sh81QJWrEe6KJ9B1NiSMNg" value="STATUS_TELEPHONE is not null"/>
+      </node>
+      <node defType="com.stambia.rdbms.check" id="_3iOr0ZWrEe6KJ9B1NiSMNg" name="favori">
+        <attribute defType="com.stambia.rdbms.check.remarks" id="_5ejOkJWrEe6KJ9B1NiSMNg" value="FAVORI = 'Oui' or FAVORI = 'Non'"/>
+        <attribute defType="com.stambia.rdbms.check.sql" id="_8KGO0JWrEe6KJ9B1NiSMNg" value="FAVORI is not null"/>
+      </node>
+      <node defType="com.stambia.rdbms.check" id="_9fIvIZWrEe6KJ9B1NiSMNg" name="type telephone">
+        <attribute defType="com.stambia.rdbms.check.remarks" id="_CB7k4JWsEe6KJ9B1NiSMNg" value="TYPE = 'Fixe' or TYPE = 'Portable'"/>
+        <attribute defType="com.stambia.rdbms.check.sql" id="_FHF_AJWsEe6KJ9B1NiSMNg" value="TYPE is not null"/>
+      </node>
+      <node defType="com.stambia.rdbms.check" id="_bSLhIZWsEe6KJ9B1NiSMNg" name="format telephone">
+        <attribute defType="com.stambia.rdbms.check.remarks" id="_cmRmQJWsEe6KJ9B1NiSMNg" value="numero de telephone doit respecter le format xx.xx.xx.xx.xx"/>
+        <attribute defType="com.stambia.rdbms.check.sql" id="_epVDIJWsEe6KJ9B1NiSMNg" value="PHONE LIKE '__.__.__.__.__'"/>
+      </node>
     </node>
     <node defType="com.stambia.rdbms.datastore" id="_jfbeYZAlEe69cu6-bNESsg" name="SAS_CLIENT">
       <attribute defType="com.stambia.rdbms.datastore.name" id="_jfbeYpAlEe69cu6-bNESsg" value="SAS_CLIENT"/>
@@ -354,6 +424,25 @@
           <attribute defType="com.stambia.rdbms.relation.fk" id="_umXEopAnEe69cu6-bNESsg" ref="resource.md#_jlWgMJAlEe69cu6-bNESsg?fileId=_CHAaQIUmEe6BKsDnQj9IRA$type=md$name=ID_FICHIER?"/>
           <attribute defType="com.stambia.rdbms.relation.pk" id="_umXEo5AnEe69cu6-bNESsg" ref="resource.md#_juUO8JAlEe69cu6-bNESsg?fileId=_CHAaQIUmEe6BKsDnQj9IRA$type=md$name=ID_FICHIER?"/>
         </node>
+      </node>
+      <node defType="com.stambia.rdbms.column" id="_0e0Cl5WkEe6KJ9B1NiSMNg" name="ACT" position="13">
+        <attribute defType="com.stambia.rdbms.column.name" id="_0e0CmJWkEe6KJ9B1NiSMNg" value="ACT"/>
+        <attribute defType="com.stambia.rdbms.column.nullable" id="_0e0CmZWkEe6KJ9B1NiSMNg" value="1"/>
+        <attribute defType="com.stambia.rdbms.column.charByte" id="_0e0CmpWkEe6KJ9B1NiSMNg" value="CHAR"/>
+        <attribute defType="com.stambia.rdbms.column.type" id="_0e0Cm5WkEe6KJ9B1NiSMNg" value="VARCHAR2"/>
+        <attribute defType="com.stambia.rdbms.column.size" id="_0e0CnJWkEe6KJ9B1NiSMNg" value="10"/>
+      </node>
+      <node defType="com.stambia.rdbms.check" id="_aqcvkZWoEe6KJ9B1NiSMNg" name="type_ligne">
+        <attribute defType="com.stambia.rdbms.check.remarks" id="_fe9ncJWoEe6KJ9B1NiSMNg" value="TYPE n'est pas vide"/>
+        <attribute defType="com.stambia.rdbms.check.sql" id="_gpI7kJWoEe6KJ9B1NiSMNg" value="TYPE is not null"/>
+      </node>
+      <node defType="com.stambia.rdbms.check" id="_mzWbEZWoEe6KJ9B1NiSMNg" name="ACTION">
+        <attribute defType="com.stambia.rdbms.check.remarks" id="_pH3bYJWoEe6KJ9B1NiSMNg" value="ACT  = 'S' or  ACT = 'M' or ACT = 'C'"/>
+        <attribute defType="com.stambia.rdbms.check.sql" id="_rMio4JWoEe6KJ9B1NiSMNg" value="ACT is not null"/>
+      </node>
+      <node defType="com.stambia.rdbms.check" id="_zaW-4ZWoEe6KJ9B1NiSMNg" name="STATUS">
+        <attribute defType="com.stambia.rdbms.check.remarks" id="_0_2WAJWoEe6KJ9B1NiSMNg" value="STATUS est présent&#xD;&#xA;"/>
+        <attribute defType="com.stambia.rdbms.check.sql" id="_2_fSgJWoEe6KJ9B1NiSMNg" value="STATUS is not null"/>
       </node>
     </node>
     <node defType="com.stambia.rdbms.datastore" id="_j44gNJAlEe69cu6-bNESsg" name="SAS_FILESRC">
@@ -575,6 +664,21 @@
           <attribute defType="com.stambia.rdbms.relation.fk" id="_unj-gpAnEe69cu6-bNESsg" ref="resource.md#_uW0MwJAnEe69cu6-bNESsg?fileId=_CHAaQIUmEe6BKsDnQj9IRA$type=md$name=CLE_CLIENT?"/>
           <attribute defType="com.stambia.rdbms.relation.pk" id="_unj-g5AnEe69cu6-bNESsg" ref="resource.md#_jlQZkJAlEe69cu6-bNESsg?fileId=_CHAaQIUmEe6BKsDnQj9IRA$type=md$name=CLE_CLIENT?"/>
         </node>
+      </node>
+      <node defType="com.stambia.rdbms.column" id="_0qGsVpWkEe6KJ9B1NiSMNg" name="ACT" position="14">
+        <attribute defType="com.stambia.rdbms.column.name" id="_0qGsV5WkEe6KJ9B1NiSMNg" value="ACT"/>
+        <attribute defType="com.stambia.rdbms.column.nullable" id="_0qGsWJWkEe6KJ9B1NiSMNg" value="1"/>
+        <attribute defType="com.stambia.rdbms.column.charByte" id="_0qGsWZWkEe6KJ9B1NiSMNg" value="CHAR"/>
+        <attribute defType="com.stambia.rdbms.column.type" id="_0qGsWpWkEe6KJ9B1NiSMNg" value="VARCHAR2"/>
+        <attribute defType="com.stambia.rdbms.column.size" id="_0qGsW5WkEe6KJ9B1NiSMNg" value="10"/>
+      </node>
+      <node defType="com.stambia.rdbms.check" id="_KbHvUZWqEe6KJ9B1NiSMNg" name="ACTION">
+        <attribute defType="com.stambia.rdbms.check.remarks" id="_PosncJWqEe6KJ9B1NiSMNg" value="ACT  = 'S' or  ACT = 'M' or ACT = 'C'"/>
+        <attribute defType="com.stambia.rdbms.check.sql" id="_RLxjwJWqEe6KJ9B1NiSMNg" value="ACT is not null"/>
+      </node>
+      <node defType="com.stambia.rdbms.check" id="_SiJg0ZWqEe6KJ9B1NiSMNg" name="STATUS">
+        <attribute defType="com.stambia.rdbms.check.remarks" id="_WhS28JWqEe6KJ9B1NiSMNg" value="STATUS = suspendu, active, npai"/>
+        <attribute defType="com.stambia.rdbms.check.sql" id="_0dhaIJWqEe6KJ9B1NiSMNg" value="STATUS is not null"/>
       </node>
     </node>
     <node defType="com.stambia.rdbms.datastore" id="_kY7_oZAtEe69cu6-bNESsg" name="DWH_ADRESSE">
