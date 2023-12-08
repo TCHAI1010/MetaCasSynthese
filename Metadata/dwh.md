@@ -726,6 +726,10 @@
           <attribute defType="com.stambia.rdbms.relation.pk" id="_kq7Hg5AtEe69cu6-bNESsg" ref="resource.md#_juUO8JAlEe69cu6-bNESsg?fileId=_CHAaQIUmEe6BKsDnQj9IRA$type=md$name=ID_FICHIER?"/>
         </node>
       </node>
+      <node defType="com.stambia.rdbms.check" id="_fQl0o5XyEe6y4uGH1zGLPg" name="compte">
+        <attribute defType="com.stambia.rdbms.check.sql" id="_fQl0pJXyEe6y4uGH1zGLPg" value="DWH_ADRESSE.SID_COMPTE is not null"/>
+        <attribute defType="com.stambia.rdbms.check.severity" id="_fQl0pZXyEe6y4uGH1zGLPg" value="300"/>
+      </node>
     </node>
     <node defType="com.stambia.rdbms.datastore" id="_kecxwZAtEe69cu6-bNESsg" name="DWH_EMAIL">
       <attribute defType="com.stambia.rdbms.datastore.name" id="_kecxwpAtEe69cu6-bNESsg" value="DWH_EMAIL"/>
@@ -786,6 +790,10 @@
           <attribute defType="com.stambia.rdbms.relation.fk" id="_krbd0pAtEe69cu6-bNESsg" ref="resource.md#_kjwIgJAtEe69cu6-bNESsg?fileId=_CHAaQIUmEe6BKsDnQj9IRA$type=md$name=ID_FICHIER?"/>
           <attribute defType="com.stambia.rdbms.relation.pk" id="_krbd05AtEe69cu6-bNESsg" ref="resource.md#_juUO8JAlEe69cu6-bNESsg?fileId=_CHAaQIUmEe6BKsDnQj9IRA$type=md$name=ID_FICHIER?"/>
         </node>
+      </node>
+      <node defType="com.stambia.rdbms.check" id="_U8JJUZXyEe6y4uGH1zGLPg" name="client">
+        <attribute defType="com.stambia.rdbms.check.sql" id="_ZC1R4JXyEe6y4uGH1zGLPg" value="DWH_EMAIL.SID_CLIENT is not null"/>
+        <attribute defType="com.stambia.rdbms.check.severity" id="_bmT7QJXyEe6y4uGH1zGLPg" value="200"/>
       </node>
     </node>
     <node defType="com.stambia.rdbms.datastore" id="_kj22MZAtEe69cu6-bNESsg" name="DWH_CLIENT">
@@ -909,6 +917,10 @@
           <attribute defType="com.stambia.rdbms.relation.fk" id="_kr-3cpAtEe69cu6-bNESsg" ref="resource.md#_kpK0BZAtEe69cu6-bNESsg?fileId=_CHAaQIUmEe6BKsDnQj9IRA$type=md$name=CLE_CLIENT?"/>
           <attribute defType="com.stambia.rdbms.relation.pk" id="_kr-3c5AtEe69cu6-bNESsg" ref="resource.md#_jlQZkJAlEe69cu6-bNESsg?fileId=_CHAaQIUmEe6BKsDnQj9IRA$type=md$name=CLE_CLIENT?"/>
         </node>
+      </node>
+      <node defType="com.stambia.rdbms.check" id="_Jqkj4ZXxEe6y4uGH1zGLPg" name="compte">
+        <attribute defType="com.stambia.rdbms.check.sql" id="_QOYPIJXxEe6y4uGH1zGLPg" value="DWH_CLIENT.SID_COMPTE is not null"/>
+        <attribute defType="com.stambia.rdbms.check.severity" id="_UJOUEJXxEe6y4uGH1zGLPg" value="300"/>
       </node>
     </node>
     <node defType="com.stambia.rdbms.datastore" id="_kNAccZAtEe69cu6-bNESsg" name="DWH_COMPTE">
@@ -1071,6 +1083,10 @@
           <attribute defType="com.stambia.rdbms.relation.fk" id="_kqaKIpAtEe69cu6-bNESsg" ref="resource.md#_kY15AJAtEe69cu6-bNESsg?fileId=_CHAaQIUmEe6BKsDnQj9IRA$type=md$name=ID_FICHIER?"/>
           <attribute defType="com.stambia.rdbms.relation.pk" id="_kqaKI5AtEe69cu6-bNESsg" ref="resource.md#_juUO8JAlEe69cu6-bNESsg?fileId=_CHAaQIUmEe6BKsDnQj9IRA$type=md$name=ID_FICHIER?"/>
         </node>
+      </node>
+      <node defType="com.stambia.rdbms.check" id="_uzpS05XyEe6y4uGH1zGLPg" name="client">
+        <attribute defType="com.stambia.rdbms.check.sql" id="_uzpS1JXyEe6y4uGH1zGLPg" value="DWH_TEL.SID_CLIENT is not null"/>
+        <attribute defType="com.stambia.rdbms.check.severity" id="_uzpS1ZXyEe6y4uGH1zGLPg" value="200"/>
       </node>
     </node>
   </node>
